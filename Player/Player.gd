@@ -21,21 +21,35 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	ipt_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	ipt_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	
-	if ipt_vector !=Vector2.ZERO:
-		state = MOVE
+#	ipt_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+#	ipt_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+#
+#	if ipt_vector !=Vector2.ZERO:
+#		state = MOVE
+#	else:
+#		state = IDLE
+#
+#	match state:
+#		IDLE:
+#			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+#		MOVE:
+#			velocity = velocity.move_toward(ipt_vector * MAX_SPEED, ACCELERATION * delta)
+#
+#	move_and_slide(velocity)
+
+	velocity.y += 20
+	if Input.is_action_pressed("ui_right"):
+		velocity.x = 500
+	elif Input.is_action_pressed("ui_left"):
+		velocity.x = -500
 	else:
-		state = IDLE
+		velocity.x = 0
 		
-	match state:
-		IDLE:
-			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-		MOVE:
-			velocity = velocity.move_toward(ipt_vector * MAX_SPEED, ACCELERATION * delta)
-			
-	move_and_slide(velocity)
+	if Input.is_action_just_pressed("ui_up"):
+		velocity.y = -750
+	
+	velocity = move_and_slide(velocity)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
