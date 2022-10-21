@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://interface/Dialogue Box.gd" type="Script" id=1]
+
+[node name="Dialogue Box" type="CanvasLayer"]
+layer = 99
+
+[node name="Dialogue Box" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )

@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Attack_Quick_03.wav-7a5c095b3f0bfdfd7519c8c1a8336014.sample"
+
+[deps]
+
+source_file="res://assets/audio/Khron Studio - Monster Library Vol 1/1.Attack_Quick/Attack_Quick_03.wav"
+dest_files=[ "res://.import/Attack_Quick_03.wav-7a5c095b3f0bfdfd7519c8c1a8336014.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

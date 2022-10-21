@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Eating_Loop_WithGrunts.wav-281e6f5dd0c58384591eea939a4cf960.sample"
+
+[deps]
+
+source_file="res://assets/audio/Khron Studio - Monster Library Vol 2/9.Eating_Loop_WithGrunts/Eating_Loop_WithGrunts.wav"
+dest_files=[ "res://.import/Eating_Loop_WithGrunts.wav-281e6f5dd0c58384591eea939a4cf960.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

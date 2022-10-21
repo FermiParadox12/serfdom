@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Slobber_03.wav-c9dcd056c76a34ccfb45d18588172892.sample"
+
+[deps]
+
+source_file="res://assets/audio/Khron Studio - Monster Library Vol 1/11.Slobber/Slobber_03.wav"
+dest_files=[ "res://.import/Slobber_03.wav-c9dcd056c76a34ccfb45d18588172892.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

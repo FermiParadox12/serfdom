@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/NasalSound_03.wav-aebc6ad041c2fff5e424b8e2da2aba84.sample"
+
+[deps]
+
+source_file="res://assets/audio/Khron Studio - Monster Library Vol 2/21.Nasal Sound/NasalSound_03.wav"
+dest_files=[ "res://.import/NasalSound_03.wav-aebc6ad041c2fff5e424b8e2da2aba84.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

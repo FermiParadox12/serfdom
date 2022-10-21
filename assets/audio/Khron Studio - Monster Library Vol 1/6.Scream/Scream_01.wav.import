@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Scream_01.wav-c90b170ef703f7790064f75e1a2946bd.sample"
+
+[deps]
+
+source_file="res://assets/audio/Khron Studio - Monster Library Vol 1/6.Scream/Scream_01.wav"
+dest_files=[ "res://.import/Scream_01.wav-c90b170ef703f7790064f75e1a2946bd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

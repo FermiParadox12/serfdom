@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Dark_Sword_Whoosh_02.wav-8a2947b1841c3c46dee6da05aa9e12fb.sample"
+
+[deps]
+
+source_file="res://assets/audio/Attacking Sound Effects/Dark_Sword_Whoosh_02.wav"
+dest_files=[ "res://.import/Dark_Sword_Whoosh_02.wav-8a2947b1841c3c46dee6da05aa9e12fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

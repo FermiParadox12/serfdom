@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Growl_04.wav-a27834d5f4f27493685d04f955309ce9.sample"
+
+[deps]
+
+source_file="res://assets/audio/Khron Studio - Monster Library Vol 1/9.Growl/Growl_04.wav"
+dest_files=[ "res://.import/Growl_04.wav-a27834d5f4f27493685d04f955309ce9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

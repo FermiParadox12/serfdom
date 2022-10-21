@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Attack_High_Intensity_02.wav-35aa2e41ef2be610022e6e45c3591e46.sample"
+
+[deps]
+
+source_file="res://assets/audio/Khron Studio - Monster Library Vol 1/3.Attack_High_Intensity/Attack_High_Intensity_02.wav"
+dest_files=[ "res://.import/Attack_High_Intensity_02.wav-35aa2e41ef2be610022e6e45c3591e46.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

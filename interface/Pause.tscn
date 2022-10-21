@@ -70,3 +70,6 @@ margin_top = 255.0
 margin_right = 292.0
 margin_bottom = 295.0
 text = "Settings"
+
+[connection signal="button_up" from="Pause/Menu Quit" to="Pause" method="_on_Menu_Quit_button_up"]
+[connection signal="button_up" from="Pause/Game Quit" to="Pause" method="_on_Game_Quit_button_up"]

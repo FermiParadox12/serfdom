@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Recieve_Attack_Medium_With_Caw_01.wav-50bb63b5bd6d3b93d9b2b32ec1df5529.sample"
+
+[deps]
+
+source_file="res://assets/audio/Khron Studio - Monster Library Vol 1/21.Recieve_Attack_Medium/Recieve_Attack_Medium_With_Caw_01.wav"
+dest_files=[ "res://.import/Recieve_Attack_Medium_With_Caw_01.wav-50bb63b5bd6d3b93d9b2b32ec1df5529.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
