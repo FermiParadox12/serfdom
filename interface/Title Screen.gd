@@ -11,7 +11,7 @@ func _ready():
 	
 
 func _on_Start_button_up():
-	timer.set_wait_time(FADE)
+	timer.set_wait_time(FADE)#Initialize timer length to FADE
 	fade_out()
 	timer.start()
 	
@@ -21,7 +21,7 @@ func _on_Quit_button_up():
 	
 
 func _on_Timer_timeout():
-	get_tree().change_scene_to(Start_Scene)
+	get_tree().change_scene_to(Start_Scene) #Switch scenes after fade-out
 	
 
 func fade_in(i):
@@ -34,5 +34,5 @@ func fade_in(i):
 
 func fade_out():
 	var tween = get_node(".").create_tween() #create tween
-	tween.tween_property(self, "modulate", Color(0, 0, 0, 1), FADE).from_current()
+	tween.tween_property(self, "modulate", Color(0, 0, 0, 1), FADE).from_current() #slowly modulate scene to black
 	
