@@ -24,11 +24,16 @@ color = Color( 0, 0, 0, 0.392157 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Name Background" type="ColorRect" parent="Dialogue Box/Speech Background"]
-margin_top = -64.0
-margin_right = 256.0
+[node name="Name Background" type="ColorRect" parent="Dialogue Box"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = -248.0
+margin_right = -704.0
+margin_bottom = -184.0
 color = Color( 0, 0, 0, 0.392157 )
 
-[node name="Name" type="RichTextLabel" parent="Dialogue Box/Speech Background/Name Background"]
+[node name="Name" type="RichTextLabel" parent="Dialogue Box/Name Background"]
 anchor_right = 1.0
 anchor_bottom = 1.0

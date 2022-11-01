@@ -20,24 +20,26 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("interact") && in_range == true:
 		$"Dialogue Box/Dialogue Box".say(speak(quest_progress, lines_spoken), name)
+		
+	if event.is_action_pressed("ui_accept"):
+		print(speak(quest_progress, lines_spoken))
 
 
 func speak(prog,lines):
-	var r = null
+	var r = "null"
 	match prog:
 		SAFEROOM: #First meeting Tallia
-			match lines:
-				0:
-					return("EEEEK! PLease don't hurt me!!")
-				1:
-					return("...")
-				2:
-					return("Wait, you're not a guard!")
-				3:
-					return("Sorry about that... Who might you be?")
-				_:
-					return(r)
+			if lines == 0:
+				r = "EEEEK! PLease don't hurt me!!"
 				
+			elif lines == 1:
+				r = "..."
+				
+			elif lines == 2:
+				r = "Wait, you're not a guard!"
+			elif lines == 3:
+				
+				r = "Sorry about that... Who might you be?"
 			
 		STARTED: #Tallia asks player to find mother
 			pass
@@ -45,6 +47,9 @@ func speak(prog,lines):
 			pass
 		COMPLETED: #Player finds mother & returns to Tallia
 			pass
+	
+	lines_spoken += 1
+	return(r)
 
 
 func _on_Tallia_body_entered(body):
@@ -58,3 +63,4 @@ func _on_Tallia_body_exited(body):
 		in_range = false
 		var tween = get_node(".").create_tween() #create tween for popup's scale from 1->0 and ease in/out
 		tween.tween_property($Popup, "scale", Vector2.ZERO, SCALETIME).from_current().set_ease(Tween.EASE_IN_OUT)
+

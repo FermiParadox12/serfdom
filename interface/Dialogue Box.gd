@@ -1,6 +1,8 @@
 extends Control
 
 onready var player = $"../../../Player"
+onready var speech = $"Speech Background/Speech"
+onready var npc_name = $"Name Background/Name"
 
 
 func _ready():
@@ -10,5 +12,8 @@ func _ready():
 func say(line, npc):
 	visible = true
 	set_position(player.position)
-	$"Speech Background/Name Background/Name".set_text(line)
-	$"Speech Background/Speech".set_text(npc)
+	npc_name.bbcode_text = npc
+	if line == "null":
+		speech.bbcode_text = "null"
+	else:
+		speech.bbcode_text = line

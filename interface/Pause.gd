@@ -10,7 +10,6 @@ func _input(event):
 		var pause_state = not get_tree().paused
 		get_tree().paused = pause_state #switch pause state
 		get_node("..").visible = pause_state
-	
 
 
 func _on_Game_Quit_button_up():
