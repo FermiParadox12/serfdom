@@ -9,8 +9,8 @@ export(int) var MAX_SPEED =300
 export(int) var ADDITIONAL_FALL_GRAVITY = 30
 export(int) var JUMP_FORCE = 750
 export(int) var JUMP_RELEASE_FORCE = 375
-const up_dierection = Vector2(0, -1)#normal vector for the floor
-var max_jumps = 2
+const up_direction = Vector2(0, -1)#normal vector for the floor
+var max_jumps = 1
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -34,16 +34,20 @@ func _physics_process(delta):
 	#jumping
 	if is_on_floor():
 		fast_fell = false
+		max_jumps = 1
 		if Input.is_action_just_pressed("ui_up"):
 			velocity.y = -JUMP_FORCE
 	else:
+		if max_jumps > 0 && Input.is_action_just_pressed("ui_up"):
+			velocity.y = -JUMP_FORCE
+			max_jumps -= 1
+			
 		if Input.is_action_just_released("ui_up") and velocity.y < -375:
 			velocity.y = -JUMP_RELEASE_FORCE
-		
 		if velocity.y > 0:
 			velocity.y += ADDITIONAL_FALL_GRAVITY
 			
-	velocity = move_and_slide(velocity, up_dierection)
+	velocity = move_and_slide(velocity, up_direction)
 
 func apply_gravity():
 	velocity.y += GRAVITY
