@@ -26,8 +26,8 @@ position = Vector2( 0, -48 )
 texture = ExtResource( 3 )
 
 [node name="Dialogue Box" parent="." instance=ExtResource( 4 )]
-offset = Vector2( -200, -500 )
-transform = Transform2D( 1, 0, 0, 1, -200, -500 )
+margin_top = 32.0
+margin_bottom = 32.0
 
 [connection signal="body_entered" from="." to="." method="_on_Tallia_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Tallia_body_exited"]
