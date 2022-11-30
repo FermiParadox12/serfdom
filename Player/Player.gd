@@ -21,6 +21,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
+	$AnimatedSprite.playing = true
 	#movement
 	apply_gravity()
 	var get_input = Vector2.ZERO
@@ -28,9 +29,12 @@ func _physics_process(delta):
 	
 	if get_input.x == 0:
 		apply_friction()
+		$AnimatedSprite.animation = "Idle"
 	else:
-		 apply_acceleration(get_input.x)
-	
+		apply_acceleration(get_input.x)
+		$AnimatedSprite.animation = "Run"
+		
+		
 	#jumping
 	if is_on_floor():
 		fast_fell = false
@@ -38,6 +42,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_up"):
 			velocity.y = -JUMP_FORCE
 	else:
+		$AnimatedSprite.animation = "Jump"
 		if max_jumps > 0 && Input.is_action_just_pressed("ui_up"):
 			velocity.y = -JUMP_FORCE
 			max_jumps -= 1
@@ -46,8 +51,15 @@ func _physics_process(delta):
 			velocity.y = -JUMP_RELEASE_FORCE
 		if velocity.y > 0:
 			velocity.y += ADDITIONAL_FALL_GRAVITY
+			if max_jumps > 0 && Input.is_action_just_pressed("ui_up"):
+				velocity.y = -JUMP_FORCE
+				max_jumps -= 1
 			
 	velocity = move_and_slide(velocity, up_direction)
+	
+	#attack
+#	if Input.is_action_just_pressed("ui_accept"):
+#		$AnimatedSprite.animation = "Attack"
 
 func apply_gravity():
 	velocity.y += GRAVITY
@@ -58,5 +70,11 @@ func apply_friction():
 	
 func apply_acceleration(amount):
 	velocity.x = move_toward(velocity.x, MAX_SPEED * amount, ACCELERATION)
+	if velocity.x > 0:
+		$AnimatedSprite.flip_h = false
+	elif velocity.x < 0:
+		$AnimatedSprite.flip_h = true
+	else:
+		$AnimatedSprite.flip_h = $AnimatedSprite.flip_h
 	pass
 
