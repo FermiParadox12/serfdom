@@ -1,6 +1,7 @@
 extends KinematicBody2D
+class_name Player
 
-var velocity = Vector2.ZERO
+export(Vector2) var velocity = Vector2.ZERO
 var fast_fell = false
 export(int) var GRAVITY = 30
 export(int) var ACCELERATION = 500

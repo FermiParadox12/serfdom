@@ -1,13 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/player assets/knight/knightwakling200x200.png" type="Texture" id=2]
 [ext_resource path="res://assets/player assets/knight/knightjumping2 (3)_scaled_6x_pngcrushed.png" type="Texture" id=3]
+[ext_resource path="res://Enemy_Killbox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/player assets/knight/knightwalkinginbetween200x200.png" type="Texture" id=5]
 [ext_resource path="res://assets/player assets/knight/knightwalking2200x200.png" type="Texture" id=6]
 
 [sub_resource type="StreamTexture" id=3]
-load_path = "res://.import/knightfighting (6).png-5f06e51d156fde39782e7dc6fdef13ef.stex"
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -33,9 +33,13 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9, 14 )
+extents = Vector2( 7, 13 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 7, 1 )
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -43,12 +47,18 @@ position = Vector2( -4.17233e-07, -4.17233e-07 )
 scale = Vector2( 0.16, 0.16 )
 frames = SubResource( 2 )
 animation = "Run"
-frame = 3
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2, 2 )
+position = Vector2( -1, 1 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.5, 0.5 )
+
+[node name="Enemy_Killbox" parent="." instance=ExtResource( 4 )]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy_Killbox"]
+position = Vector2( -1, 15 )
+shape = SubResource( 4 )
